@@ -1,16 +1,33 @@
-# React + Vite
+# Shift Handover Log
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A digital shift handover tool for mine sites. Outgoing shifts document production, equipment status, safety incidents, and critical notes for incoming shifts.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Shift Handover Form** — Date, shift type, supervisors, production summary, equipment checklist, safety incidents, critical notes, and confirmation
+- **Handover Dashboard** — Overview with last handover summary, equipment snapshot, days without LTI counter, and pending maintenance
+- **Handover History** — Searchable list with view details, edit (within 24h), and delete
+- **Equipment Status Timeline** — Track when each equipment was marked Down/Limited across shifts
+- **Print / PDF** — Print button on detail view with clean print styles
+- **Dark / Light Mode** — Toggle in sidebar
+- **User Authentication** — Login/register with demo account
 
-## React Compiler
+## Setup
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+## Demo Account
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Username: `demo`
+- Password: `demo123`
+
+## Tech Stack
+
+- React 19
+- React Router v7
+- Vite
+- Context API (state management)
+- localStorage (persistence)

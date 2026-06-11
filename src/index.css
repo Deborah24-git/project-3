@@ -4,7 +4,7 @@
   --mono: ui-monospace, Consolas, monospace;
 
   font: 16px/1.5 var(--sans);
-  color-scheme: light;
+  color-scheme: light dark;
   color: #0f172a;
   background: #f8fafc;
   font-synthesis: none;
@@ -34,4 +34,12 @@ p { margin: 0; }
 
 input, select, textarea, button {
   font-family: inherit;
+}
+
+@media print {
+  body * { visibility: hidden; }
+  #print-area, #print-area * { visibility: visible; }
+  #print-area { position: absolute; left: 0; top: 0; width: 100%; }
+  button { display: none !important; }
+  @page { margin: 1.5cm; }
 }
